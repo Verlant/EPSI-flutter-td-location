@@ -50,7 +50,7 @@ class MyHomePage extends StatelessWidget {
 
   MyHomePage({required this.title, super.key}) {
     _habitations = service.getHabitationsTop10();
-    _typehabitats = service.getTypeHabitat();
+    _typehabitats = service.getTypeHabitats();
   }
 
   // final _typehabitats = [
@@ -134,7 +134,7 @@ class MyHomePage extends StatelessWidget {
           itemExtent: 220,
           itemBuilder: (context, index) =>
               _buildRow(_habitations[index], context),
-          scrollDirection: Axis.horizontal,
+            scrollDirection: Axis.vertical,
         ));
   }
 
